@@ -1,0 +1,6 @@
+services:
+  airflow:
+    image: my-airflow
+    build:
+      context: ..
+      dockerfile: .devcontainer/airflow.Dockerfile
