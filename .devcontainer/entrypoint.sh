@@ -1,13 +1,18 @@
 #!/bin/bash
+echo "Starting entrypoint.sh"
+#echo print ls -la /workspace   
+echo "ls -la /workspace"
+ls -la /workspace
 rm -rf /opt/airflow/dags /opt/airflow/logs /opt/airflow/plugins /opt/airflow/airflow.cfg /opt/airflow/*.py
 ln -svf /workspace/dags /opt/airflow/
 ln -svf /workspace/logs /opt/airflow/
 ln -svf /workspace/plugins /opt/airflow/
 ln -svf /workspace/config/airflow.cfg /opt/airflow/airflow.cfg
 mkdir -p /opt/airflow/config
-ln -svf /workspace/config/airflow_local_settings.py /opt/airflow/config/airflow_local_settings.py
+# ln -svf /workspace/config/airflow_local_settings.py /opt/airflow/config/airflow_local_settings.py
 
 if [ ! -f /workspace/config/fernet.key ]; then
+    echo "Generating fernet key"
     python -c 'from cryptography.fernet import Fernet;fernet_key = Fernet.generate_key();print(fernet_key.decode())' >/workspace/config/fernet.key
 fi
 export AIRFLOW__CORE__FERNET_KEY=$(cat /workspace/config/fernet.key)

@@ -1,4 +1,4 @@
-pysnow==0.7.17
-uuid7==0.1.0
-google-re2==1.1
-Authlib==1.3.2
+#pysnow==0.7.17
+#uuid7==0.1.0
+#google-re2==1.1
+#Authlib==1.3.2

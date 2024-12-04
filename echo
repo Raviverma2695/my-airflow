@@ -1,0 +1,12 @@
+total 24
+drwxr-xr-x  11 raviv  staff   352B Dec  1 19:26 .
+drwxr-xr-x   6 raviv  staff   192B Nov 30 20:11 ..
+drwxr-xr-x   7 raviv  staff   224B Dec  1 14:34 .devcontainer
+drwxr-xr-x  14 raviv  staff   448B Dec  1 00:46 .git
+-rw-r--r--   1 raviv  staff   3.1K Nov 30 20:11 .gitignore
+-rw-r--r--   1 raviv  staff    27B Nov 30 20:11 README.md
+drwxr-xr-x   6 raviv  staff   192B Dec  1 14:24 config
+-rw-r--r--   1 raviv  staff     0B Dec  1 19:26 echo
+drwxr-xr-x   2 raviv  staff    64B Dec  1 00:31 plugins
+-rw-r--r--   1 raviv  staff    52B Dec  1 14:44 pyproject.toml
+drwxr-xr-x   6 raviv  staff   192B Dec  1 14:53 requirements

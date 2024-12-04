@@ -4,3 +4,9 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/airflow.Dockerfile
+      args:
+        - AIRFLOW_VERSION=${AIRFLOW_VERSION}
+        - PY_VERSION=${PY_VERSION}
+        - AIRFLOW_EXTRAS=${AIRFLOW_EXTRAS}
+    volumes:
+      - ..:/workspace
